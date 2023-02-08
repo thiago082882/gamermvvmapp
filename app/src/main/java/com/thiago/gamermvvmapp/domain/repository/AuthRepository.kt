@@ -5,7 +5,7 @@ import com.thiago.gamermvvmapp.domain.model.Response
 
 interface AuthRepository {
 
-    val currenUser: FirebaseUser?
-    fun login(email: String, password: String): Response<FirebaseUser>
+    val currentUser: FirebaseUser?
+    suspend fun login(email: String, senha: String): Response<FirebaseUser>
 
 }

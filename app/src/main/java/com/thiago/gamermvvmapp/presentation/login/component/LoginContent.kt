@@ -1,6 +1,7 @@
 package com.thiago.gamermvvmapp.presentation.login.component
 
 import android.util.Log
+import android.widget.Toast
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
@@ -13,6 +14,7 @@ import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.input.KeyboardType
@@ -23,6 +25,7 @@ import androidx.hilt.navigation.compose.hiltViewModel
 import com.thiago.gamermvvmapp.R
 import com.thiago.gamermvvmapp.components.DefaultButton
 import com.thiago.gamermvvmapp.components.DefaultTextField
+import com.thiago.gamermvvmapp.domain.model.Response
 import com.thiago.gamermvvmapp.presentation.login.LoginViewModel
 import com.thiago.gamermvvmapp.presentation.ui.theme.Darkgray500
 import com.thiago.gamermvvmapp.presentation.ui.theme.GamerMVVMAPPTheme
@@ -30,7 +33,9 @@ import com.thiago.gamermvvmapp.presentation.ui.theme.Red500
 
 
 @Composable
-fun LoginContent(viewModel : LoginViewModel = hiltViewModel()) {
+fun LoginContent(viewModel: LoginViewModel = hiltViewModel()) {
+
+    val loginFlow = viewModel.loginFlow.collectAsState()
     Box(
         modifier = Modifier
             .fillMaxWidth()
@@ -120,8 +125,7 @@ fun LoginContent(viewModel : LoginViewModel = hiltViewModel()) {
                     text = "INICIAR SESSÃO",
                     onClick = {
 
-                        Log.d("LoginContent", "Email: ${viewModel.email.value}")
-                        Log.d("LoginContent", "Password:${viewModel.senha.value}")
+                     viewModel.login()
 
 
                     },
@@ -130,7 +134,27 @@ fun LoginContent(viewModel : LoginViewModel = hiltViewModel()) {
 
             }
         }
+    }
+    loginFlow.value.let {
+        when (it) {
+            Response.Loading -> {
+                Box(
+                    contentAlignment = Alignment.Center,
+                    modifier = Modifier.fillMaxSize()
+                ) {
+                    CircularProgressIndicator()
+                }
+            }
+            is Response.Success -> {
+                Toast.makeText(LocalContext.current, "Usuario logado ", Toast.LENGTH_LONG).show()
+
+            }
+            is Response.Failure -> {
+
+                Toast.makeText(LocalContext.current, it.exception?.message ?: "Error desconhecido", Toast.LENGTH_LONG).show()
+            }
         }
+    }
 }
 
 
