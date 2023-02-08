@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1003320309279",
+    "project_id": "gamer-mvvm-app-ab0e3",
+    "storage_bucket": "gamer-mvvm-app-ab0e3.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1003320309279:android:2ce879a11315c338b3872a",
+        "android_client_info": {
+          "package_name": "com.thiago.gamermvvmapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1003320309279-eckc08vv96egv1epn9at8hf2tt2ag60e.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAX0XiKR_0LwZ4iDUQE8OljXlx7uV98Abk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1003320309279-eckc08vv96egv1epn9at8hf2tt2ag60e.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
