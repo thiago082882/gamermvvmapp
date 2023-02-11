@@ -1,6 +1,6 @@
 
 
-# <img align="center" alt="Daniel-HTML" height="30" width="30" src="https://media.glassdoor.com/sqll/2609019/foursys-brasil-squarelogo-1559625206764.png"> Gamer App - Jetpack Compose
+# <img align="center" alt="Daniel-HTML" height="30" width="30" src="https://i.pinimg.com/originals/ac/fd/a8/acfda88101fa9029e571343ddb431eb4.jpg"> Gamer App - Jetpack Compose
 
 <div align="center">
 </div>
