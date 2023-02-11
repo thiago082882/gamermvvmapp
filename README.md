@@ -1,6 +1,6 @@
 
 
-# <img align="center" alt="Daniel-HTML" height="30" width="30" src="https://i.pinimg.com/originals/ac/fd/a8/acfda88101fa9029e571343ddb431eb4.jpg"> Gamer App - Jetpack Compose
+# <img align="center" alt="Daniel-HTML" height="30" width="30" src="https://cdn-icons-png.flaticon.com/512/1474/1474155.png"> Gamer App - Jetpack Compose
 
 <div align="center">
 </div>
