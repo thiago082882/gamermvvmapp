@@ -20,25 +20,20 @@ import com.thiago.gamermvvmapp.presentation.ui.theme.Red500
 
 
 @Composable
-
 fun DefaultButton(
+    modifier: Modifier,
     text: String,
     onClick: () -> Unit,
     color: Color = Red500,
-    icon: ImageVector=Icons.Default.ArrowForward,
+    icon: ImageVector = Icons.Default.ArrowForward,
+    enabled: Boolean = true
+) {
 
-
-
-    ){
     Button(
-        modifier = Modifier
-            .fillMaxWidth()
-            .padding(vertical = 45.dp),
-        onClick = { onClick()},
-        colors = ButtonDefaults.buttonColors(backgroundColor = color)
-
-
-
+        modifier = modifier,
+        onClick = { onClick() },
+        colors = ButtonDefaults.buttonColors(backgroundColor = color),
+        enabled = enabled
     ) {
         Icon(
             imageVector = icon,
@@ -47,4 +42,5 @@ fun DefaultButton(
         Spacer(modifier = Modifier.width(10.dp))
         Text(text = text)
     }
+
 }

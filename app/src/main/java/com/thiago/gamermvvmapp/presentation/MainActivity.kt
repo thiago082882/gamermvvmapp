@@ -8,7 +8,7 @@ import androidx.compose.material.*
 import androidx.compose.ui.Modifier
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.rememberNavController
-import com.thiago.gamermvvmapp.presentation.navigation.AppNavigation
+import com.thiago.gamermvvmapp.presentation.navigation.RootNavGraph
 import com.thiago.gamermvvmapp.presentation.ui.theme.GamerMVVMAPPTheme
 import dagger.hilt.android.AndroidEntryPoint
 
@@ -19,14 +19,15 @@ class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
-            GamerMVVMAPPTheme (darkTheme = true){
+            GamerMVVMAPPTheme(darkTheme = true) {
                 // A surface container using the 'background' color from the theme
                 Surface(
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colors.background
-                ) {
+                )
+                {
                     navController = rememberNavController()
-                  AppNavigation(navController = navController)
+                    RootNavGraph(navController = navController)
                 }
             }
         }
