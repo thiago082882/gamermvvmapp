@@ -1,6 +1,4 @@
 
-Em Andamento  
-
 # <img align="center" alt="Daniel-HTML" height="30" width="30" src="https://cdn-icons-png.flaticon.com/512/1474/1474155.png"> Gamer App - Jetpack Compose
 
 <div align="center">
@@ -100,7 +98,7 @@ O projeto foi desenvolvido utilizando as seguintes bibliotecas:
 ---
 
 ## 🚀 Video
-Em Andamento 
+https://www.linkedin.com/posts/thiagocostadejesus_androiddeveloper-kotlin-mvvm-activity-7043246070205689857-LswT?utm_source=share&utm_medium=member_desktop
 
 ---
 
